@@ -10,7 +10,7 @@ Interview Questions
    - A closure is a function that retains access to its lexical scope even when the function is executed outside that scope. This allows functions to access variables from an enclosing scope, even after that scope has finished executing.
 
 3. **What is the `this` keyword and how is it used?**
-   - `this` refers to the object that is executing the current function. Its value is determined by how a function is called:
+   - `This` refers to the object that is executing the current function. Its value is determined by how a function is called:
      - In a method, `this` refers to the owner object.
      - In a function, `this` refers to the global object (or `undefined` in strict mode).
      - In an arrow function, `this` retains the value of the enclosing lexical context's `this`.
