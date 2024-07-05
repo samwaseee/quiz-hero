@@ -19,7 +19,7 @@ Interview Questions
    - Promises are objects that represent the eventual completion (or failure) of an asynchronous operation and its resulting value. They have three states: pending, fulfilled, and rejected. Use `.then()`, `.catch()`, and `.finally()` to handle the results.
 
 5. **Explain the difference between `var`, `let`, and `const`.**
-   - `var` has function scope and is hoisted to the top of its scope.
+   - `var` h has globally scoped or function scoped and is hoisted to the top of its scope. they are available for use throughout the entire window. can re-declare and update.
    - `let` has block scope and is not hoisted.
    - `const` has block scope and is not hoisted; it also cannot be reassigned after its initial assignment.
 
