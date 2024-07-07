@@ -122,6 +122,228 @@ Interview Questions
     - `sessionStorage`: Stores data for the duration of the page session. Data is not sent to the server with every request.
     - `cookies`: Store data that is sent to the server with every request. Can have expiration dates.
 
+
+### CSS Questions
+
+1. **What is CSS?**
+   - CSS stands for Cascading Style Sheets. It’s used to style and layout web pages, including adjusting colors, fonts, and spacing.
+
+2. **What are the different ways to apply CSS to a web page?**
+   - CSS can be applied in three ways: inline (directly within an HTML element using the `style` attribute), internal (within a `<style>` tag in the HTML document’s `<head>` section), and external (linking to an external CSS file using the `<link>` tag).
+
+3. **What is the syntax of CSS?**
+   - CSS syntax includes a selector and a declaration block. The selector points to the HTML element to style, and the declaration block contains one or more declarations separated by semicolons. Each declaration includes a property and a value, like `color: red;`.
+
+4. **What are CSS selectors?**
+   - CSS selectors are patterns used to select the elements you want to style. Common selectors include type selectors (`p`), class selectors (`.classname`), ID selectors (`#idname`), and attribute selectors (`[attribute]`).
+
+5. **What is the difference between class selectors and ID selectors?**
+   - Class selectors (`.classname`) are used to select multiple elements, while ID selectors (`#idname`) are used to select a single, unique element on a page.
+
+6. **What is the CSS box model?**
+   - The CSS box model describes the rectangular boxes generated for elements in the document tree. It includes the content, padding, border, and margin areas.
+
+7. **What is the difference between padding and margin?**
+   - Padding is the space between the content and the border of an element, while margin is the space outside the border of an element.
+
+8. **What are CSS properties?**
+   - CSS properties are used to define styles for HTML elements. Examples include `color`, `font-size`, `margin`, `padding`, and `background`.
+
+9. **What is the difference between `display: none` and `visibility: hidden`?**
+   - `display: none` completely removes the element from the document flow, while `visibility: hidden` hides the element but it still takes up space in the layout.
+
+10. **What is a CSS pseudo-class?**
+    - A CSS pseudo-class is used to define the special state of an element, such as `:hover` (when the mouse is over an element) or `:first-child` (when the element is the first child of its parent).
+
+11. **What is a CSS pseudo-element?**
+    - A CSS pseudo-element is used to style specified parts of an element, such as `::before` (inserts content before an element’s content) or `::after` (inserts content after an element’s content).
+
+12. **What is the CSS `position` property, and what are its possible values?**
+    - The `position` property specifies the positioning method of an element. Possible values are `static`, `relative`, `absolute`, `fixed`, and `sticky`.
+
+13. **What is the difference between `position: relative` and `position: absolute`?**
+    - `position: relative` positions an element relative to its normal position, while `position: absolute` positions an element relative to its nearest positioned ancestor.
+
+14. **What is the CSS `z-index` property?**
+    - The `z-index` property specifies the stack order of elements. Elements with a higher `z-index` are in front of elements with a lower `z-index`.
+
+15. **What is the CSS `float` property?**
+    - The `float` property is used to position an element to the left or right of its container, allowing text and inline elements to wrap around it.
+
+16. **What is the `clear` property in CSS?**
+    - The `clear` property is used to control the behavior of floating elements, specifying whether an element should be moved below floating elements (`clear: left`, `clear: right`, or `clear: both`).
+
+17. **What is the CSS `flexbox` layout?**
+    - The CSS `flexbox` layout is a one-dimensional layout method for arranging items in rows or columns. It helps to align and distribute space among items in a container.
+
+18. **What are CSS media queries?**
+    - CSS media queries are used to apply styles based on the characteristics of the device, such as screen width, height, or orientation. They are commonly used for responsive design.
+
+19. **What is the `box-shadow` property in CSS?**
+    - The `box-shadow` property adds shadow effects around an element’s frame. It includes values for horizontal and vertical offsets, blur radius, spread radius, and color.
+
+20. **What is the `transition` property in CSS?**
+    - The `transition` property allows you to change property values smoothly (over a given duration) when an element’s state changes.
+
+21. **What is the `transform` property in CSS?**
+    - The `transform` property applies 2D or 3D transformations to an element, such as `rotate`, `scale`, `translate`, and `skew`.
+
+22. **What is the `animation` property in CSS?**
+    - The `animation` property allows you to animate the change of CSS properties over time. It includes properties like `animation-name`, `animation-duration`, `animation-timing-function`, and `animation-iteration-count`.
+
+23. **What are CSS variables?**
+    - CSS variables (or custom properties) allow you to store values that can be reused throughout a document. They are defined using the `--` prefix and accessed with the `var()` function, like `--main-color: blue;` and `color: var(--main-color);`.
+
+24. **What is the `grid` layout in CSS?**
+    - The CSS `grid` layout is a two-dimensional layout system for creating complex web layouts. It allows you to define rows and columns and place items within the grid.
+
+25. **What is the `@import` rule in CSS?**
+    - The `@import` rule allows you to import one CSS file into another. It must be at the top of the CSS file before any other rules, like `@import url("styles.css");`.
+### Additional CSS Questions and Answers
+
+1. **What are CSS custom properties (variables), and how do you use them?**
+
+   CSS custom properties, also known as CSS variables, allow you to store values that can be reused throughout a document. They help in maintaining consistent design and make it easier to update styles. Here’s how you can define and use them:
+   
+   ```css
+   :root {
+     --primary-color: #3498db;
+     --secondary-color: #2ecc71;
+     --padding: 10px;
+   }
+
+   .element {
+     color: var(--primary-color);
+     padding: var(--padding);
+   }
+   ```
+
+2. **Explain the difference between `inline-block` and `block` elements.**
+
+   - **Block elements:** 
+     - Take up the full width available.
+     - Always start on a new line.
+     - Examples: `<div>`, `<p>`, `<h1>`, etc.
+
+   - **Inline-block elements:**
+     - Take up only as much width as needed.
+     - Do not start on a new line.
+     - Allow setting width and height.
+     - Example: `<span>` with `display: inline-block`.
+
+3. **What are CSS combinators, and how do they work?**
+
+   CSS combinators describe the relationship between selectors. There are four types:
+   
+   - **Descendant combinator (space):** Selects elements that are descendants of another element.
+     ```css
+     div p { color: blue; }
+     ```
+   - **Child combinator (`>`):** Selects elements that are direct children of another element.
+     ```css
+     div > p { color: green; }
+     ```
+   - **Adjacent sibling combinator (`+`):** Selects elements that are immediately next to another element.
+     ```css
+     h1 + p { color: red; }
+     ```
+   - **General sibling combinator (`~`):** Selects elements that are siblings of another element.
+     ```css
+     h1 ~ p { color: orange; }
+     ```
+
+4. **How can you create a CSS triangle?**
+
+   CSS triangles are created using the `border` property. Here’s an example to create a downward-pointing triangle:
+
+   ```css
+   .triangle {
+     width: 0;
+     height: 0;
+     border-left: 20px solid transparent;
+     border-right: 20px solid transparent;
+     border-top: 20px solid black;
+   }
+   ```
+
+5. **Explain the concept of specificity in CSS.**
+
+   Specificity determines which CSS rule is applied by the browser when multiple rules could apply to the same element. It is calculated based on the types of selectors used:
+   
+   - Inline styles: `1000`
+   - IDs: `100`
+   - Classes, attributes, and pseudo-classes: `10`
+   - Elements and pseudo-elements: `1`
+   
+   Example:
+   ```css
+   #id { color: red; }         /* specificity: 100 */
+   .class { color: blue; }     /* specificity: 10 */
+   div { color: green; }       /* specificity: 1 */
+   ```
+
+6. **What is the `:nth-child` pseudo-class, and how is it used?**
+
+   The `:nth-child` pseudo-class selects elements based on their position among siblings. You can use formulas to select specific patterns:
+   
+   ```css
+   /* Selects every second element */
+   li:nth-child(2n) { color: red; }
+
+   /* Selects the third element */
+   li:nth-child(3) { color: blue; }
+
+   /* Selects the first 3 elements */
+   li:nth-child(-n+3) { color: green; }
+   ```
+
+7. **How can you create a responsive grid layout using CSS Grid?**
+
+   CSS Grid is a powerful layout system. Here’s a simple example of a responsive grid layout:
+
+   ```css
+   .container {
+     display: grid;
+     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+     gap: 10px;
+   }
+
+   .item {
+     background-color: #f0f0f0;
+     padding: 20px;
+   }
+   ```
+
+8. **What is the `clamp()` function in CSS, and how is it useful?**
+
+   The `clamp()` function allows you to set a value that’s bounded by a minimum and a maximum value. It’s useful for responsive design:
+
+   ```css
+   .element {
+     font-size: clamp(1rem, 2vw, 2rem);
+   }
+   ```
+
+   This sets the font size to 1rem at minimum, 2rem at maximum, and scales with the viewport width in between.
+
+9. **How do you handle browser compatibility issues with CSS?**
+
+   - Use vendor prefixes: `-webkit-`, `-moz-`, `-ms-`, etc.
+   - Utilize feature queries with `@supports`.
+   - Provide fallbacks for unsupported features.
+   - Test across different browsers and devices.
+   - Use tools like Autoprefixer to automate adding prefixes.
+
+10. **What are some best practices for organizing and maintaining large CSS codebases?**
+
+    - Use a CSS preprocessor like SASS or LESS for modular code.
+    - Follow a naming convention like BEM (Block, Element, Modifier).
+    - Keep styles scoped to components to avoid global conflicts.
+    - Regularly refactor and remove unused styles.
+    - Document your code and use comments to explain complex rules.
+    - Use a linter to enforce coding standards and consistency.
+
+
 ### React Questions
 
 1. **What is React?**
