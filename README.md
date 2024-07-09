@@ -7,7 +7,7 @@ Interview Questions
    - `==` compares values for equality after converting both values to a common type (type coercion), while `===` compares both value and type without performing type conversion.
 
 2. **Explain closures in JavaScript.**
-   - A closure is a function that retains access to its lexical scope even when the function is executed outside that scope. This allows functions to access variables from an enclosing scope, even after that scope has finished executing.
+   - A closure is a feature in JavaScript that created when a function is declared within a function. This allows functions to access variables from an enclosing scope, even after that scope has finished executing.
 
 3. **What is the `this` keyword and how is it used?**
    - `This` refers to the object that is executing the current function. Its value is determined by how a function is called:
